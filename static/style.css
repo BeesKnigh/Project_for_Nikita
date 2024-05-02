@@ -1,76 +1,75 @@
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: sans-serif;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    margin: 0;
     padding: 20px;
+    color: #fff;
+}
+
+.container {
+    width: 80%;
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #222;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    border-radius: 8px;
 }
 
 h1 {
-    margin-bottom: 20px;
+    text-align: center;
+    color: #ccc;
 }
 
-#search-form {
+.search-form {
     display: flex;
-    width: 100%;
-    max-width: 600px;
+    flex-direction: column;
+    gap: 10px;
 }
 
-#search-input {
-    flex-grow: 1;
+#search-input, select {
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px 0 0 5px;
+    border: 2px solid #555;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #222;
+    color: #ddd;
 }
 
 #search-button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
+    background-color: #555;
     color: white;
-    border: none;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-}
-
-#language-select {
-    margin-left: 10px;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
 }
 
-#results {
+#search-button:hover {
+    background-color: #777;
+}
+
+.authors {
+    display: flex;
+    justify-content: space-around;
     margin-top: 20px;
-    width: 100%;
-    max-width: 800px;
 }
 
-.result-title {
-    font-size: 1.2em;
-    margin-bottom: 5px;
+.author {
+    text-align: center;
+    padding: 10px;
 }
 
-.result-summary {
-    margin-bottom: 15px;
+.author img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #555;
 }
 
-.other-results {
+.author p {
     margin-top: 10px;
-    list-style: none;
-    padding: 0;
-}
-
-.other-results li {
-    margin-bottom: 5px;
-}
-
-a {
-    color: #007bff;
-    text-decoration: none;
-}
-.other-results {
-    margin-top: 10px;
-    list-style: none;
-    padding: 0;
-    text-align: left;
+    color: #ccc;
 }
