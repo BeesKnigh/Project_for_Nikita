@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="{{ language }}">
+<head>
+    <meta charset="UTF-8">
+    <title>Уточните запрос</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Уточните запрос: "{{ search_term }}"</h1>
+        <p>Найдено несколько вариантов:</p>
+        <ul>
+            {% for option in options %}
+                <li><a href="{{ url_for('search_and_redirect', term=option, lang=language) }}">{{ option }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

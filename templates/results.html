@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="{{ language }}">
+<head>
+    <meta charset="UTF-8">
+    <title>Результаты поиска</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Результаты поиска</h1>
+
+        {% if error %}
+            <p>{{ error }}</p>
+        {% else %}
+            <h2>{{ results[0] }}</h2>
+            <p>{{ summary }}</p>
+
+                <h3>Другие результаты:</h3>
+                <ul>
+                    {% for result in results[1:] %}
+                        <li><a href="https://ru.wikipedia.org/wiki/{{ result|urlencode }}">{{ result }}</a></li>
+                    {% endfor %}
+                </ul>
+
+        {% endif %}
+
+        <a href="{{ url_for('search') }}">Новый поиск</a>
+    </div>
+</body>
+</html>
